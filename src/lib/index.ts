@@ -1,1 +1,3 @@
-export { prisma } from './prisma';
+export { getMailClient } from './mail'
+export { prisma } from './prisma'
+
