@@ -3,6 +3,7 @@ import { FastifyInstance } from 'fastify'
 import { ZodTypeProvider } from 'fastify-type-provider-zod'
 import nodemailer from 'nodemailer'
 import { z } from 'zod'
+import { env } from '../env'
 import { ClientError } from '../errors'
 import { getMailClient, prisma } from '../lib'
 
@@ -52,7 +53,7 @@ export async function createTrip(app: FastifyInstance) {
       }
     })
 
-    const confirmationLink = `http://localhost:3333/trips/${trip.id}/confirm`
+    const confirmationLink = `${env.API_BASE_URL}/trips/${trip.id}/confirm`
 
     const mail = await getMailClient()
     const message = await mail.sendMail({

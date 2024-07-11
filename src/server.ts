@@ -1,6 +1,7 @@
 import cors from '@fastify/cors'
 import fastify from 'fastify'
 import { serializerCompiler, validatorCompiler } from 'fastify-type-provider-zod'
+import { env } from './env'
 import { errorHandler } from './error-handler'
 import { confirmParticipant, confirmTrip, createActivity, createInvite, createLink, createTrip, getActivities, getLinks, getParticipant, getParticipants, getTripDetails, healthCheck, updateTrip } from './routes'
 
@@ -19,6 +20,6 @@ app.setErrorHandler(errorHandler)
 
 routes.map(route => app.register(route))
 
-app.listen({ port: 3333 }).then(() => {
+app.listen({ port: env.PORT }).then(() => {
   console.log('🚀 HTTP server running!')
 })
