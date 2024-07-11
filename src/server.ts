@@ -1,18 +1,18 @@
-import cors from '@fastify/cors';
-import fastify from 'fastify';
-import { serializerCompiler, validatorCompiler } from 'fastify-type-provider-zod';
-import { confirmParticipant, confirmTrip, createTrip, healthCheck } from './routes';
+import cors from '@fastify/cors'
+import fastify from 'fastify'
+import { serializerCompiler, validatorCompiler } from 'fastify-type-provider-zod'
+import { confirmParticipant, confirmTrip, createActivity, createTrip, healthCheck } from './routes'
 
 const app = fastify()
 
-const routes = [healthCheck, createTrip, confirmTrip, confirmParticipant]
+const routes = [confirmParticipant, confirmTrip, createActivity, createTrip, healthCheck]
 
 app.register(cors, {
   origin: true
 })
 
-app.setValidatorCompiler(validatorCompiler);
-app.setSerializerCompiler(serializerCompiler);
+app.setValidatorCompiler(validatorCompiler)
+app.setSerializerCompiler(serializerCompiler)
 
 routes.map(route => app.register(route))
 

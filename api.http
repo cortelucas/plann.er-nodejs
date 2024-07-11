@@ -30,5 +30,15 @@ GET {{baseURL}}/trips/9477770a-b816-48ae-929e-846a0f44ff37/confirm HTTP/1.1
 GET {{baseURL}}/participants/461feb02-9283-48d6-af0e-bcccbe0421bd/confirm HTTP/1.1
 
 ###
+# @name addActivity
+POST {{baseURL}}/trips/9477770a-b816-48ae-929e-846a0f44ff37/activities HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Academia",
+  "occurs_at": "2024-07-12T15:18:03.665Z"
+}
+
+###
 # @name healthCheck
 GET {{baseURL}}/health-check HTTP/1.1
