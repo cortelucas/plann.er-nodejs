@@ -10,21 +10,20 @@ POST {{baseURL}}/trips HTTP/1.1
 Content-Type: application/json
 
 {
-  "destination": "Florianópolis",
+  "destination": "Junqueirópolis",
   "starts_at": "2024-07-11T15:18:03.665Z",
   "ends_at": "2024-07-19T15:18:03.665Z",
-  "owner_name": "Lucas",
+  "owner_name": "Lucas Corte",
   "owner_email": "lucas@me.com",
   "emails_to_invite": [
     "andressa@me.com",
-    "pedro@me.com",
-    "maria@me.com"
+    "leo@me.com"
   ]
 }
 
 ###
 # @name confirmTrip
-GET {{baseURL}}/trips/e9df19a7-7767-436b-9a13-d14e8f3263a1/confirm HTTP/1.1
+GET {{baseURL}}/trips/9477770a-b816-48ae-929e-846a0f44ff37/confirm HTTP/1.1
 
 ###
 # @name healthCheck
