@@ -8,4 +8,5 @@ export { getActivities } from './get-activities'
 export { getLinks } from './get-links'
 export { getParticipants } from './get-participants'
 export { healthCheck } from './health-check'
+export { updateTrip } from './update-trip'
 
