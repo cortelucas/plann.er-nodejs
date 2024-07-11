@@ -1,6 +1,7 @@
 export { confirmParticipant } from './confirm-participant'
 export { confirmTrip } from './confirm-trip'
 export { createActivity } from './create-activity'
+export { createInvite } from './create-invite'
 export { createLink } from './create-link'
 export { createTrip } from './create-trip'
 export { getActivities } from './get-activities'
