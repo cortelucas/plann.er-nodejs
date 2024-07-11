@@ -5,6 +5,8 @@ import { confirmTrip, createTrip, healthCheck } from './routes';
 
 const app = fastify()
 
+const routes = [healthCheck, createTrip, confirmTrip]
+
 app.register(cors, {
   origin: true
 })
@@ -12,9 +14,7 @@ app.register(cors, {
 app.setValidatorCompiler(validatorCompiler);
 app.setSerializerCompiler(serializerCompiler);
 
-app.register(healthCheck)
-app.register(createTrip)
-app.register(confirmTrip)
+routes.map(route => app.register(route))
 
 app.listen({ port: 3333 }).then(() => {
   console.log('🚀 HTTP server running!')
