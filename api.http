@@ -19,6 +19,10 @@ Content-Type: application/json
 }
 
 ###
+# @name getTripDetails
+GET {{baseURL}}/trips/9477770a-b816-48ae-929e-846a0f44ff37 HTTP/1.1
+
+###
 # @name updateTrip
 PUT {{baseURL}}/trips/9477770a-b816-48ae-929e-846a0f44ff37 HTTP/1.1
 Content-Type: application/json

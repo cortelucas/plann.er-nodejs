@@ -1,11 +1,11 @@
 import cors from '@fastify/cors'
 import fastify from 'fastify'
 import { serializerCompiler, validatorCompiler } from 'fastify-type-provider-zod'
-import { confirmParticipant, confirmTrip, createActivity, createInvite, createLink, createTrip, getActivities, getLinks, getParticipants, healthCheck, updateTrip } from './routes'
+import { confirmParticipant, confirmTrip, createActivity, createInvite, createLink, createTrip, getActivities, getLinks, getParticipants, getTripDetails, healthCheck, updateTrip } from './routes'
 
 const app = fastify()
 
-const routes = [confirmParticipant, confirmTrip, createLink, createActivity, createInvite, createTrip, getActivities, getLinks, getParticipants, healthCheck, updateTrip]
+const routes = [confirmParticipant, confirmTrip, createLink, createActivity, createInvite, createTrip, getActivities, getLinks, getParticipants, getTripDetails, healthCheck, updateTrip]
 
 app.register(cors, {
   origin: true
